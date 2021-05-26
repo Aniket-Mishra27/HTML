@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style type="text/css">
+   	span {cursor:pointer; }
+		.number{
+			margin:20px 100px 10px 0px;
+		}
+		.minus, .plus{
+			width:20px;
+			height:20px;
+			background:#f2f2f2;
+			border-radius:4px;
+			padding:8px 5px 8px 5px;
+			border:1px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+		}
+		input{
+			height:34px;
+      width: 100px;
+      text-align: center;
+      font-size: 26px;
+			border:1px solid #ddd;
+			border-radius:4px;
+      display: inline-block;
+      vertical-align: middle;
+        }
+    </style>
+</head>
+<body style="background-color: royalblue;">
+    <div style="background-color: rgba(0, 162, 255, 0.753); margin: 50px 350px 100px 350px; border-radius: 20px; padding: 15px;">
+        <p><B>BILL</B></p>
+        <input type="number" width="100px"  height="100px" value="0.00" class="my_input" id="bill">
+        <p><b>TIP(In Percent)</b></p>
+        <div class="number" >
+            <span class="minus" >-</span>
+            <input type="text" value="15" class="my_input" id="tippercent" >
+            <span class="plus">+</span>
+        </div>
+        <p><b>Number Of People</b></p>
+        <div class="number" style="float: left;" >
+            <span class="minus" >-</span>
+            <input type="text" value="0" class="my_input" id="num">
+            <span class="plus">+</span>
+        </div>
+        <p  style="margin: -120px 350px 100px 270px;"><b>TIP!</b></p>
+        <input type="text" style="margin: -200px 350px 100px 270px;" readonly  id="distip" value="RS 0.00">
+        <p style="margin: -75px 0px 100px 270px;"><b>TOTAL</b></p>
+        <input type="text" style="margin: -150px 0px 0px 270px;" value="RS 0.00" readonly id="distotal">
+        <form>
+        
+    </div>
+    <script type="text/JavaScript">
+    	$(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+      var input = document.getElementsByClassName("my_input");
+      for(var i = 0;i<=input.length;i++)
+      {
+        input[i].addEventListener("keyup", function(event)
+        {
+          
+        if (event.keyCode == 13) 
+        {
+          
+          event.preventDefault();
+          var bill = document.getElementById("bill").value;
+          var tip = document.getElementById("tippercent").value;
+          var num = document.getElementById("num").value;
+          if(num== 0)
+          {
+            alert("Please enter a valid number of people")
+          }
+          else
+          {
+          var finaltip = (bill * (tip*0.01))/num;
+          
+          document.getElementById("distip").value= finaltip;
+          document.getElementById("distotal").value=(bill/2)+finaltip;
+          }
+      
+          
+        }  
+        
+        });
+      }
+      
+        
+      
+	    });
+    </script>
+</body>
+</html>

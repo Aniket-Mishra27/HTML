@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack</title>
+    <style type="text/css">
+    html{
+      scroll-behavior: smooth;
+    }
+    .navbar{
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+      .navbar-fixed-top.scrolled {
+      background-color: #fff !important;
+      transition: background-color 200ms linear;
+      background-color: red;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+}
+      .navbar a:hover {
+        background: #ddd;
+        color: black;
+      }
+      
+      ::-webkit-scrollbar {
+  width: 20px;
+}
+
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+    
+
+    ::-webkit-scrollbar-thumb {
+      background: plum; 
+      border-radius: 10px;
+    }
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: pink; 
+}
+.smallbutton{
+  background-image: url('smallbutton.JPG');
+  height: 165px;
+  width: 120px;
+  margin-left: 30px;
+}
+.mediumbutton{
+  background-image: url('mediumbutton.JPG');
+  height: 200px;
+  width: 115px;
+  margin-left: 30px;
+}
+.largebutton{
+  background-image: url('largebutton.JPG');
+  height: 250px;
+  width: 113px;
+  margin-left: 30px;
+}
+#smallbutton{
+  opacity: 0.4;
+}
+#smallbutton:hover{
+  opacity: 1;
+}
+#mediumbutton{
+  opacity: 0.4;
+}
+#mediumbutton:hover{
+  opacity: 1;
+}
+#largebutton{
+  opacity: 0.4;
+}
+#largebutton:hover{
+  opacity: 1;
+}
+
+body{
+  height:10%;
+  background: linear-gradient( 141deg, #7a0fb8 0%, #1fdba3 51%, #e82cbf 75%);
+}
+.soln{
+  margin:-300px 0px 0px 300px;
+}
+.solnlink:hover{
+  color: aqua;
+}
+body {
+    background-color: #d8d8d8;
+}
+
+.social-menu ul {
+    position:absolute;
+    top:400%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display :block;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+    </style>
+</head>
+<body >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="body_color">
+  <div class="navbar">
+  <img src="Capture.JPG" style="float:left">
+  <a href = "#why_slack">WhySlack</a>
+  <a href = "#solution">Solutions</a>
+  <a href = "#resourcing">Resourcing</a>
+  <a href = "pricingpage.html" target="_blank" id="pricingpage">Pricing</a>
+  <a href = "signinslack.html" style="float:right" target="_blank">Sign In</a>
+  <a href = "#slackintro" style="float:right">Get Started</a>
+  <div class="dropdown" >
+    <button class="dropbtn" onclick="alert('it works')">Dropdown</button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  <div>
+  <br><br><br>
+  <iframe src="https://www.tutorialrepublic.com" width="500px" height="500px" style="float:left"></iframe>
+  <p id="slackintro"> <h1 style="color:yellowgreen;"><center>WHAT IS SLACK?</center></h1></p><br>
+  <pre style="text-align: center;"><h3>
+    Slack is a proprietary business communication platform<br>&nbsp;&nbsp;&nbsp; developed by American software company Slack Technologies.<br>&nbsp;&nbsp;&nbsp; Slack offers many IRC-style features, including persistent chat rooms<br>&nbsp;&nbsp;&nbsp; organized by topic, private groups, and direct messaging. Wikipedia
+    Initial release date: August 2013
+    Developer: Slack Technologies
+   <b> Windows:</b> 4.12.0 / December 14, 2020; 4 months ago
+    <b>Linux (Beta)</b>: 4.12.0 / December 14, 2020; 4 months ago
+    Android: 20.12.10 / December 14, 2020; 4 months ago
+    Programming languages: JavaScript, C++, Electron, Hack
+  </h3>
+  </pre><br><br> <br> <br> <br> <br> <br> <br> <br><br><br> <br> <br> <br> <br> </div>
+  <div id="why_slack">
+  <p><h1 style="margin-left:30px;">SLACKS BRINGS YOUR <br>WHOLE TEAM TOGETHER!</h1></p>
+  <h2 style="margin-left:30px;">See what slack looks like!</h2><br><br>
+  <input type="button" id="smallbutton" class="smallbutton" float="left" onclick="document.getElementById('mainimg').src='smallbuttonimg.png'">
+  <input type="button" id="mediumbutton" class="mediumbutton" float="left" onclick="document.getElementById('mainimg').src='mediumbuttonimg.JPG'">
+  <input type="button" id="largebutton" class="largebutton" float="left" onclick="document.getElementById('mainimg').src='largebuttonimg.JPG'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="smallbuttonimg.png" height="500px" width="500px" id="mainimg"></div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br>
+<p id="solution"><h1 style = "margin-left:30px;">Even Projects with<br>Other Companies!<br></h1><h2 style = "margin-left:30px;">Slack Connect lets two companies move as quickly as one.<br>Hatch a partnership. Close the deal. Build something new.</h2></p><br>
+<a href="https://slack.com/intl/en-in/resources/using-slack/slack-connect?geocode=en-in" class="solnlink"><h3 style="margin-left:30px">Learn more about slack connect! -></h3></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="solutionpage.jpg" width="500px" height="450px" class="soln">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="social-menu" id="resourcing">
+  <h1 style="text-align: center;">YOU COULD ALWAYS STAY IN TOUCH WITH US THROUGH!</h1><br>
+  <ul>
+    <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a></li>
+    <li><a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+  </ul>
+</div>
+
+</body>
+</html>
